@@ -92,8 +92,7 @@ class Corpus(object):
         sentences = re.split(r'\n|\. |!|\?', self.text)
 
         return [(
-                    sentence.decode('utf-8')
-                            .strip('\n')
+                    sentence.strip('\n')
                             .translate(remove_punctuation_map)
                             .lower()
                             .split()
